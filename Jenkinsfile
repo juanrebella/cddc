@@ -15,7 +15,7 @@ pipeline {
         stage("Build image") {
             steps {
                 script {
-                    myapp = docker.build(nachorebella/hello:${env.BUILD_ID}")
+                    myapp = docker.build("nachorebella/hello:${env.BUILD_ID}")
                 }
             }
         }
